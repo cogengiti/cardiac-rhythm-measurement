@@ -55,3 +55,14 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Data movies
+*.avi
+*.mp4
+
+# LaTeX files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
