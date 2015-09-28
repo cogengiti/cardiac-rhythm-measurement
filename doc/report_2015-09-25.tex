@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,top=15mm]{geometry}
+\usepackage{hyperref}
+
+
+\title{Cardiac Rhythm Measurement --- Report}
+\author{Nobert~Dubroca \\ \small{\texttt{n.dubroca@gmail.com}}
+  \and Marc~Heidmann \\ \small{\texttt{marc.heidmann@ens-lyon.fr}}
+  \and Sol\`{e}ne~Herv\'{e} \\ \small{\texttt{sol.herve@gmail.com}}
+  \and Baptiste~Lefebvre \\ \small{\texttt{baptiste.lefebvre@ens.fr}}
+  \and Louis~Ryckembusch \\ \small{\texttt{louis.ryck@gmail.com}}}
+\date{September 25, 2015}
+
+\sloppy
+\pagenumbering{gobble}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Our current status}
+
+\begin{itemize}
+\item Reading of Eulerian Video Magnification ... \cite{wu2012eulerian}
+\item Reading of Detecting Pulse from ... \cite{balakrishnan2013detecting}
+\item Reading of Tristan Hearn code
+\item Reading of Hao-Yu, Michael Rubinstein and Eugene Shih code
+\item Creation of a Github repository \href{https://github.com/cogengiti/cardiac-rhythm-measurement}{cogengiti/wardiac-rhythm-measurement}
+\end{itemize}
+
+
+\section{Our goals}
+
+\begin{itemize}
+\item Deeply understand the two research papers
+\item Study the feasibility of the translation from Matlab to Python
+\item Find if we can take advantage of other biological events caused by heart activity
+\item Study if we can easily isolate the skin
+\end{itemize}
+
+
+\section{Our questions}
+
+\begin{itemize}
+\item Possible difficulty to translate the Matlab toolbox matlabPyrTools.
+\item Real-time for eulerian magnification (i.e. complexity) ?
+\item Tristan Hearn valid detection ?
+\end{itemize}
+
+
+\bibliographystyle{alpha}
+\bibliography{bibliography.bib}
+
+\end{document}
