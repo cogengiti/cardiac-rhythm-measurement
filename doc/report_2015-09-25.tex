@@ -4,8 +4,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\usepackage[a4paper,top=15mm]{geometry}
+\usepackage[a4paper,top=15mm,bottom=15mm]{geometry}
 \usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
 
 
 \title{Cardiac Rhythm Measurement --- Report}
@@ -18,41 +19,42 @@
 
 \sloppy
 \pagenumbering{gobble}
-
+\hypersetup{
+  colorlinks=true,
+  citecolor=BrickRed,
+  urlcolor=NavyBlue,
+}
 
 \begin{document}
 
 \maketitle
 
 
-\section{Our current status}
+\section*{Our current status}
 
-\begin{itemize}
-\item Reading of Eulerian Video Magnification ... \cite{wu2012eulerian}
-\item Reading of Detecting Pulse from ... \cite{balakrishnan2013detecting}
-\item Reading of Tristan Hearn code
-\item Reading of Hao-Yu, Michael Rubinstein and Eugene Shih code
-\item Creation of a Github repository \href{https://github.com/cogengiti/cardiac-rhythm-measurement}{cogengiti/wardiac-rhythm-measurement}
-\end{itemize}
+First of all, we taked the plunge by the readings of the two papers \cite{wu2012eulerian,balakrishnan2013detecting} which give all the theoretical foundations for the project. We also managed to test the stand-alone precompiled application for Mac OSX \href{https://github.com/thearn/webcam-pulse-detector}{\texttt{webcam-pulse-detector}} developed by Tristan Hearn but we were not able to assess the validity of the detection.
+
+Thereafter, we taked a first look at the Python code behind \href{https://github.com/thearn/webcam-pulse-detector}{\texttt{webcam-pulse-detector}} and the Matlab code behind \href{http://people.csail.mit.edu/mrub/evm/#code}{\texttt{eulerian-video-magnification}}, written by Hao-Yu, Michael Rubinstein and Eugene Shih. We managed to reproduce the result of the MIT's paper \cite{wu2012eulerian} but with a significant computational time (about ten minutes).
+
+Eventually, we have created a GitHub organisation named \href{https://github.com/cogengiti}{cogengiti} to host all the code produced during the project. You will find this code in our repository called \href{https://github.com/cogengiti/cardiac-rhythm-measurement}{cardiac-rhythm-measurement}.
 
 
-\section{Our goals}
+\section*{Our goals}
 
-\begin{itemize}
-\item Deeply understand the two research papers
-\item Study the feasibility of the translation from Matlab to Python
-\item Find if we can take advantage of other biological events caused by heart activity
-\item Study if we can easily isolate the skin
-\end{itemize}
+So far, we have identified different goals to help us better understand how to implement the project. In particular, how to organize us to make the most of everyone's skills.
+
+First, have a better understanding of the two papers. The signal processing for detecting subtle changes in color is probably improvable. There is no code attached to the paper about the detection of the heart beat from head motion \cite{balakrishnan2013detecting}.
+
+Second, the Matlab code we have downloaded contains a Matlab toolbox. We must determine whether it is feasible or not to translate it into Python in a reasonable time.
+
+Third, find if we can take advantage of other biological events caused by heart activity. We already thought that we might take advantage of the visible mouvement of the skin of the neck caused by the influx of blood through the carotid artery.
+
+Fourth, study if there exists efficient algorithms to isolate the skin in order to detect the subtle change in color only the corresponding region.
 
 
-\section{Our questions}
+\section*{Our questions}
 
-\begin{itemize}
-\item Possible difficulty to translate the Matlab toolbox matlabPyrTools.
-\item Real-time for eulerian magnification (i.e. complexity) ?
-\item Tristan Hearn valid detection ?
-\end{itemize}
+Here are our questions about the project at this stage. What if the Matlab toolbox translation in Python turns out to be not feasible ? What if the complexity of the algorithm for eulerian magnification can not be reduce (i.e. real-time not possible) ? Is it possible to have access to a mesuring tool of the cardiac rhythm to validate the application of Tristan Hearn ? What are the specifications of the final use of our deliverable ?
 
 
 \bibliographystyle{alpha}
