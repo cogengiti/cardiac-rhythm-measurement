@@ -1,7 +1,7 @@
 """
 The program 'eulerian.py' reproduces the results of the paper Eulerian Video
 Magnification for Revealing Subtle Changes in the World by Hao-Yu Wu, Michael
-Rubinstein, Eugene Shih, John Guttag, Frédo Durand and William T. Freeman from
+Rubinstein, Eugene Shih, John Guttag, Fredo Durand and William T. Freeman from
 the MIT CSAIL and Quanta Research Cambridge, Inc (SIGGRAPH 2012).
 """
 
