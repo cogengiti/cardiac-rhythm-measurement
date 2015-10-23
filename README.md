@@ -3,13 +3,13 @@ Measure of cardiac rhythm from a webcam.
 
 
 ## TODO
-- [ ] Complete the documentation section (e.g. papers, GitHub tutorial, libraries)
-- [ ] Make the report (e.g. list the relevant issues)
-- [ ] Create GitHub accounts
+- [x] Complete the documentation section (e.g. papers, GitHub tutorial, libraries)
+- [x] Make the report (e.g. list the relevant issues)
+- [x] Create GitHub accounts
 
 
 ## Subtasks
-- [ ] Data acquisition (webcam + cardiac measures)
+- [x] Data acquisition (webcam + cardiac measures)
 - [ ] Fusion of the color canal and micro-movements & validation
 - [ ] Direct measurement of motion from codec (if time allows)
 
